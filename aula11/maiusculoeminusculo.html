@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando para Maiúsculo e Minúsculo</title>
+    <style>
+        body{
+            font: normal 12pt Arial;
+        }
+
+        #texto{
+            width: 350px;
+            height: 100px;
+            text-align: center;
+        }
+
+        #buttonmai{
+            width: 175px;
+            height: 30px;
+            background-color: lightgreen;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #buttonmai:hover{
+            text-decoration: underline;
+            background-color: lightcoral;
+            transition: 0.3s;
+        }
+
+        #buttonmin{
+            width: 175px;
+            height: 30px;
+            background-color: lightblue;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #buttonmin:hover{
+            text-decoration: underline;
+            background-color: lightcoral;
+            transition: 0.3s;
+        }
+
+        #vejaresultado{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: underline;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        #resultado{
+            word-wrap: break-word;
+            max-width: 350px;
+            max-height: 300px;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <textarea id="texto" placeholder="Digite seu texto"></textarea></br>
+    <input id="buttonmai" type="button" onclick="maiuscula()" value="MAIÚSCULA">
+    <input id="buttonmin" type="button" onclick="minuscula()" value="minúscula">
+    <p id="vejaresultado" >Veja o resultado:</p>
+    <div id="resultado"></div>
+
+    <script>
+        var t = document.getElementById('texto')
+        var r = document.getElementById('resultado')
+
+        function maiuscula(){
+            r.innerText = t.value.toUpperCase()
+        }
+
+        function minuscula(){
+            r.innerText = t.value.toLowerCase()
+        }
+    </script>
+</body>
+</html>
